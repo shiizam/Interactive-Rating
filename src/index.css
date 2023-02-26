@@ -1,7 +1,8 @@
 *{
   font-family: 'Overpass';
-  margin: 0;
+  margin: 0 auto;
   max-width: 1440px;
+  justify-content: center;
   text-align: center;
   box-sizing: border-box;
   border: 0;

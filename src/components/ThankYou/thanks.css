@@ -4,7 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25rem;
+  margin: 0 auto;
+  width: 23.5rem;
   background: var(--rate-panel-bg);
   border-radius: 1.5rem;
 }
@@ -15,6 +16,7 @@
 .user-rating{
   background: var(--circle-bg);
   color: var(--btn-orange);
+  font-size: 0.9375em;
   border-radius: 1.4em;
   padding: 0.5rem 1rem;
   width: fit-content;
@@ -27,9 +29,24 @@
 }
 
 .thanks-panel > #p{
-  margin: 0 2rem 1rem;
+  margin: 0 1.25rem 0.75rem;
   font-weight: 400;
   color: var(--medium-grey);
   height: 10vh;
+  font-size: 0.9375em;
   line-height: 2.5ch;
+}
+
+@media only screen and (max-width: 375px){ 
+  .thanks-panel{
+    width: 20.875rem;
+  }
+
+  .rate-options button{
+    margin: 1rem .5rem 0;
+  }
+
+  .thanks-panel #p{
+    margin: 0 1.25rem 2rem ;
+  }
 }
