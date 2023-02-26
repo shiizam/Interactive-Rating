@@ -5,20 +5,28 @@ import { ThankYou } from '../ThankYou/ThankYou';
 import './rating.css'
 
 
-
 export const Rating = () => {
   
   const [userSelectedRating, setUserSelectedRating] = useState();
   const [submitted, setSubmitted] = useState(false);
+  const [enable, setEnable] = useState(false)
 
   function handleClickedRating(rating) {
     setUserSelectedRating(rating)
   }
+
   const submitHandler = (e) => {
     e.preventDefault()
     console.log(userSelectedRating)
     setSubmitted(true)
+  };
 
+  function SubmitButton(){
+    if (enable) {
+      return <button className='btn-submit' type='submit' >SUBMIT</button>
+    } else {
+      return <button className='btn-submit' type='submit' disabled>SUBMIT</button>
+    }
   };
   
   return (
@@ -43,11 +51,11 @@ export const Rating = () => {
           <form className="rate-form" onSubmit={submitHandler}>
             <div className='rate-options'>
               {[1, 2, 3, 4, 5].map((rating) => (
-              <button className="rate-circle" id={rating} key={rating} value={rating} type='button' onClick={event => handleClickedRating(event.target.value)}>{rating}</button>
+              <button className="rate-circle" id={rating} key={rating} value={rating} type='button' onClick={event => handleClickedRating([event.target.value, setEnable(true)])}>{rating}</button>
                 ))}
             </div>
             
-            <button className='btn-submit' type='submit' >SUBMIT</button>
+            <SubmitButton/>
           </form>
           
         </div>
