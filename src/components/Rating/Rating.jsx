@@ -43,12 +43,8 @@ export const Rating = () => {
           <form className="rate-form" onSubmit={submitHandler}>
             <div className='rate-options'>
               {[1, 2, 3, 4, 5].map((rating) => (
-              <button className="rate-circle" id='rate-1' key={rating} value={rating} type='button' onClick={event => handleClickedRating(event.target.value)}>{rating}</button>
+              <button className="rate-circle" id={rating} key={rating} value={rating} type='button' onClick={event => handleClickedRating(event.target.value)}>{rating}</button>
                 ))}
-              {/* <button className="rate-circle" id='rate-2' type='button' onClick={userSelectedRating}>2</button>
-              <button className="rate-circle" id='rate-3' type='button' onClick={userSelectedRating}>3</button>
-              <button className="rate-circle" id='rate-4' type='button' onClick={userSelectedRating}>4</button>
-              <button className="rate-circle" id='rate-5' type='button' onClick={userSelectedRating}>5</button> */}
             </div>
             
             <button className='btn-submit' type='submit' >SUBMIT</button>
