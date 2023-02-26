@@ -1,0 +1,35 @@
+/* Thank You Component Style */
+.thanks-panel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  background: var(--rate-panel-bg);
+  border-radius: 1.5rem;
+}
+
+.thanks-panel svg{
+  margin: 2rem;
+}
+.user-rating{
+  background: var(--circle-bg);
+  color: var(--btn-orange);
+  border-radius: 1.4em;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+}
+
+.thanks-panel h1{
+  margin: 1.5rem 0 0.5rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+}
+
+.thanks-panel > #p{
+  margin: 0 2rem 1rem;
+  font-weight: 400;
+  color: var(--medium-grey);
+  height: 10vh;
+  line-height: 2.5ch;
+}

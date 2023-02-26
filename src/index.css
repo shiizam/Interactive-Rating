@@ -1,0 +1,52 @@
+*{
+  font-family: 'Overpass';
+  margin: 0;
+  max-width: 1440px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 0;
+}
+
+:root {
+  /* Background Global Variables */
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+
+  /* Circle Background Global Variables */
+  --circle-bg: hsla(216, 12%, 54%, 0.075);
+
+  /* Gradient Background Global Variables */
+  --rate-panel-bg: linear-gradient(
+    to bottom,
+    /* hsla(213, 19%, 18%),
+    hsla(213, 19%, 18%, 0.05) */
+    hsl(215, 22%, 15%),
+    hsl(215, 27%, 12%)
+  );
+
+
+  /* Button Color Global Variable */
+  --btn-orange: hsl(25, 97%, 53%);
+
+
+}
+
+body{
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body p, button{
+  font-size: 15px;
+  font-family: 'Overpass';
+}
+
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(216, 12%, 8%);
+}
